@@ -1,0 +1,22 @@
+{
+  "name": "benchmarker",
+  "version": "1.0.0",
+  "description": "Benchmarks JS functions using the builtin perf_hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daryl-sen/benchmarker.git"
+  },
+  "author": "Daryl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daryl-sen/benchmarker/issues"
+  },
+  "homepage": "https://github.com/daryl-sen/benchmarker#readme",
+  "dependencies": {
+    "mathjs": "^9.3.0"
+  }
+}

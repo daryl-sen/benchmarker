@@ -29,7 +29,7 @@ results = benchmark([
   }
 ], 20);
 
-console.log(results.func3.perfHistory);
+console.log(results);
 
 
 

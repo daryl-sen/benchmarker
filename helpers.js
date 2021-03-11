@@ -1,15 +1,3 @@
-const calcAverage = function(numArr) {
-  let total = 0;
-  for (const num of numArr) {
-    total += num;
-  }
-  return total / numArr.length;
-}
-
-const calcVariance = function(numArr) {
-  
-}
-
 const validateInput = function(functionsToRun, cycles) {
   // make sure functions are passed in as an array
   if (!functionsToRun || !Array.isArray(functionsToRun) || functionsToRun.length === 0) {
@@ -25,6 +13,5 @@ const validateInput = function(functionsToRun, cycles) {
 }
 
 module.exports = {
-  calcAverage,
   validateInput
 }

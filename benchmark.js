@@ -1,5 +1,6 @@
-const { calcAverage, validateInput } = require('./helpers');
+const { validateInput } = require('./helpers');
 const { performance } = require('perf_hooks');
+const math = require('mathjs');
 
 const benchmark = function(functionsToRun, cycles) {
   console.log(`Testing ${functionsToRun.length} function(s) ${cycles} times each...`)
@@ -29,11 +30,20 @@ const benchmark = function(functionsToRun, cycles) {
       functionName = target.name;
     }
 
+    const average = math.mean(runtimes);
+    const max = math.max(runtimes);
+    const min = math.min(runtimes);
+    const range = max - min;
+    const standardDeviation = math.std(runtimes);
+    const variance = math.variance(runtimes);
+
     results[functionName] = {
-      average: calcAverage(runtimes),
-      max: Math.max(...runtimes),
-      min: Math.min(...runtimes),
-      // variance: 0,
+      average,
+      max,
+      min,
+      range,
+      standardDeviation,
+      variance,
       get perfHistory() {
         return [...runtimes];
       }
