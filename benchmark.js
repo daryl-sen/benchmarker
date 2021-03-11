@@ -24,7 +24,7 @@ const benchmark = function(functionsToRun, cycles) {
 
     let functionName;
     if (target.name === '') {
-      functionName = 'anonymousFunction' + functionsToRun.indexOf(target); 
+      functionName = 'anonymousFunc' + functionsToRun.indexOf(target); 
     } else {
       functionName = target.name;
     }
