@@ -2,7 +2,7 @@ const { calcAverage, validateInput } = require('./helpers');
 const { performance } = require('perf_hooks');
 
 const benchmark = function(functionsToRun, cycles) {
-  console.log(`Testing each function ${cycles} times...`)
+  console.log(`Testing ${functionsToRun.length} function(s) ${cycles} times each...`)
 
   if (!validateInput(arguments[0], arguments[1])) {
     return;
@@ -33,6 +33,7 @@ const benchmark = function(functionsToRun, cycles) {
       average: calcAverage(runtimes),
       max: Math.max(...runtimes),
       min: Math.min(...runtimes),
+      // variance: 0,
       get perfHistory() {
         return [...runtimes];
       }

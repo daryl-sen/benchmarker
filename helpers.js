@@ -6,6 +6,10 @@ const calcAverage = function(numArr) {
   return total / numArr.length;
 }
 
+const calcVariance = function(numArr) {
+  
+}
+
 const validateInput = function(functionsToRun, cycles) {
   // make sure functions are passed in as an array
   if (!functionsToRun || !Array.isArray(functionsToRun) || functionsToRun.length === 0) {

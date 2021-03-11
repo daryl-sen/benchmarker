@@ -3,6 +3,8 @@ const { benchmark } = require('./benchmark')
 
 
 // USAGE EXAMPLE - run `node index.js`
+
+// setup an external array
 refArray = [];
 while (refArray.length <= 1000000) {
   refArray.push(Math.random());
@@ -25,9 +27,9 @@ results = benchmark([
   function func3() {
     const newArray = [...refArray];
   }
-], 5);
+], 20);
 
-console.log(results);
+console.log(results.func3.perfHistory);
 
 
 
