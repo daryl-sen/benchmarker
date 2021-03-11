@@ -2,6 +2,7 @@ const { calcAverage, validateInput } = require('./helpers');
 const { performance } = require('perf_hooks');
 
 const benchmark = function(functionsToRun, cycles) {
+  console.log(`Testing each function ${cycles} times...`)
 
   if (!validateInput(arguments[0], arguments[1])) {
     return;
@@ -21,7 +22,14 @@ const benchmark = function(functionsToRun, cycles) {
       i++;
     }
 
-    results[target.name] = {
+    let functionName;
+    if (target.name === '') {
+      functionName = 'anonymousFunction' + functionsToRun.indexOf(target); 
+    } else {
+      functionName = target.name;
+    }
+
+    results[functionName] = {
       average: calcAverage(runtimes),
       max: Math.max(...runtimes),
       min: Math.min(...runtimes),
@@ -31,6 +39,7 @@ const benchmark = function(functionsToRun, cycles) {
     }
   }
 
+  console.log('Testing complete, results will be returned as an object containing performance information for each tested function.');
   return results;
 
 }
