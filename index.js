@@ -11,7 +11,9 @@ const func2 = function() {
   console.log('yay');
 }
 
-benchmark([myFunc, func2], 200)
+const results = benchmark([myFunc, func2], 200);
+// console.log(results.func2.perfHistory);
+console.log(results.func2);
 
 // refArray = [];
 // while (refArray.length <= 1000000) {

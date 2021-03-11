@@ -1,4 +1,5 @@
 const { calcAverage, validateInput } = require('./helpers');
+const { performance } = require('perf_hooks');
 
 const benchmark = function(functionsToRun, cycles) {
 
@@ -13,9 +14,9 @@ const benchmark = function(functionsToRun, cycles) {
     let i = 0;
 
     while (i < cycles) {
-      const start = Date.now();
+      const start = performance.now();
       target();
-      const end = Date.now();
+      const end = performance.now();
       runtimes.push(end - start);
       i++;
     }
