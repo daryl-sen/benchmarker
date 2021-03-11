@@ -63,7 +63,7 @@ const func2 = function() {
   console.log('yay');
 }
 
-benchmark([myFunc], 200)
+benchmark([myFunc, func2], 200)
 
 // refArray = [];
 // while (refArray.length <= 1000000) {
