@@ -9,7 +9,7 @@ const benchmark = function(functionsToRun, cycles) {
     return;
   }
   
-  const results = {};
+  const results = [];
 
   for (const target of functionsToRun) {
     let runtimes = [];
@@ -37,7 +37,8 @@ const benchmark = function(functionsToRun, cycles) {
     const standardDeviation = math.std(runtimes);
     const variance = math.variance(runtimes);
 
-    results[functionName] = {
+    results.push({
+      name: functionName,
       average,
       max,
       min,
@@ -47,7 +48,8 @@ const benchmark = function(functionsToRun, cycles) {
       get perfHistory() {
         return [...runtimes];
       }
-    }
+    });
+
   }
 
   console.log('Testing complete, results will be returned as an object containing performance information for each tested function.');
