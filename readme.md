@@ -13,9 +13,9 @@ The `benchmark(functionsToRun, cycles)` function takes in two arguments.
 To use this in the browser, use `const { benchmark } = require('path_to/benchmark.js')` near the start of the script, then call `benchmark()` as described above.
 
 ## Caution
-The benchmarked function will run normally, `benchmark()` does not prevent any functional side-effects. If your function's side effects depends on external factors, runtimes may differ.
-
 The current iteration does not support asynchronous functions.
+
+The benchmarked function will run normally, `benchmark()` does not prevent any functional side-effects. If your function's side effects depends on external factors, runtimes may differ.
 
 For example, consider the following function:
 ```
