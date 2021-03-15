@@ -2,10 +2,14 @@
 
 Benchmarker is a basic JS function benchmarking utility. This version is built to run with NodeJS apps and not compatible for use with browsers. For the browser-friendly version, check the `version/vanilla-js` branch. It uses Node's built-in `perf_hook` library to measure a function's completion time. To get readings that are more accurate, the number of times a function runs can be specified using the `cycles` argument.
 
-## Dependencies and installation
+## Dependencies
 * perf_hooks (JS built-in)
 * mathjs
 
+## Installation (npm)
+Run `npm install @darylt/benchmarker` in your npm project folder.
+
+## Installation (Github Source Code)
 Run `npm install` to install both dependencies.
 
 ## Usage
