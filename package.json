@@ -1,7 +1,7 @@
 {
-  "name": "benchmarker",
+  "name": "@darylt/benchmarker",
   "version": "1.0.0",
-  "description": "Benchmarks JS functions using the builtin perf_hooks",
+  "description": "Benchmarks JS functions using the builtin perf_hooks. Can benchmark several functions at the same time for multiple times, and returns stats on runtimes.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
