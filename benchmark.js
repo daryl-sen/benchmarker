@@ -52,7 +52,7 @@ const benchmark = function(functionsToRun, cycles) {
 
   }
 
-  console.log('Testing complete, results will be returned as an object containing performance information for each tested function.');
+  console.log('Testing complete, results will be returned as an array containing performance information for each tested function.');
   return results;
 
 }
